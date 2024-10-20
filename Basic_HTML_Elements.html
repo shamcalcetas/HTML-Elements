@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Basic HTML Elements </title>
+</head>
+
+<body>
+
+    <h1> This is heading 1 </h1>
+    <h2> This is heading 2 </h2>
+    <h3> This is heading 3 </h3>
+    <h4> This is heading 4 </h4>
+    <h5> This is heading 5 </h5>
+    <h6> This is heading 6 </h6>
+    
+    <br>
+    
+    <h4> PARAGRAPH </h4>
+    <p> This is the paragraph. </p>
+
+    <br>
+
+    <h4> UNORDERED LIST </h4>
+
+    <ul>
+        <li> CC104 </li>
+        <li> PT101 </li>
+        <li> PF101 </li>
+    </ul>
+
+    <h4> ORDERED LIST </h4>
+
+    <ol>
+        <li> CC104 </li>
+        <li> PT101 </li>
+        <li> PF101 </li>
+    </ol>
+
+    <br>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+
+    <h4> TABLE </h4>
+
+    <table style="width:100%">
+        <tr>
+            <th> First Name </th>
+            <th> Middle Name </th>
+            <th> Last Name </th>
+        </tr>
+
+        <tr>
+            <td> Shamelle </td>
+            <td> Esguerra </td>
+            <td> Calcetas </td>
+        </tr>
+
+        <tr>
+            <td> Noemi </td>
+            <td> Benipayo </td>
+            <td> Hipolito </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <form action="/action_page.php">
+        <h4> FORM </h4>
+        <label for="fname"> Course: </label><br>
+        <input type=" text" id="fname" name="fname"> <br>
+
+        <label for="lname"> Section: </label><br>
+        <input type=" text" id="lname" name="lname"> <br> <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <br> <br>
+
+    <style>
+        div {
+            padding: 5px;
+            background-color: #E8E9EB;
+        }
+    </style>
+
+    <div>
+        <h4> DIV ELEMENT </h4>
+        <p> Yes. This is a div element. </p>
+    </div>
+
+    <br>
+
+    <h4> IMAGE </h4>
+    <img src="image_url.png" alt="HTML" width="420" height="230">
+    <p> Reference:
+        <a href="https://www.w3schools.com/html/html_images.asp" >
+            W3Schools </a>
+    </p>
+
+    <br>
+
+    <h4> CANVAS </h4>
+    <canvas id="Canvas" width="420" height="230" 
+            style="border:1px solid #000000;">
+    </canvas>
+
+    <br> <br>
+
+    <h4> VIDEO </h4>
+    <p> <i> Your browser does not support the video tag. </i> </p>
+    <video width="420" height="230" autoplay>
+        <source src="video_url.mp4" type="video/mp4">
+    </video>
+    <p> Reference:
+        <a href="https://www.w3schools.com/html/html5_video.asp">
+            W3Schools </a>
+    </p>
+
+    <br>
+
+    <h4> YOUTUBE </h4>
+    <iframe width="420" height="230" 
+            src="https://www.youtube.com/embed/_btxV8tJM7w?si=tTnRzSVkQzZbvkLg">
+    </iframe>
+
+    <br> <br>
+
+    <h4> DRAG & DROP </h4>
+        <style>
+            #div1 {
+                width: 350px;
+                height: 70px;
+                padding: 10px;
+                border: 1px solid #aaaaaa;
+            }
+        </style>
+      
+        <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+
+        <div id="div1" ondrop="drop(event)" 
+             ondragover="allowDrop(event)">
+        </div>
+        <br>
+        <img id="drag1" src="img_logo.gif" draggable="true" 
+             ondragstart="drag(event)" width="336" height="69">
+          
+        <p> Reference:
+            <a href="https://www.w3schools.com/html/html5_draganddrop.asp">
+                W3Schools </a>
+        </p>
+
+</body>
+
+</html>
